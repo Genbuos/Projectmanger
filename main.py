@@ -1,6 +1,6 @@
-project = "What is the project?"
+project = 'What is the project?'
 
-language = "What is the language?"
+language = 'What is the language?'
 
 #this is how you comment in py!
 
@@ -25,5 +25,7 @@ todo3L = input(language)
 
 
 todos = {todo1P:todo1L, todo2P:todo2L, todo3P:todo3L}
-print(todos)
-print(type(todos))
+print("these are the current projects that i am working on:", todos,"\n",
+      "there are: ", todos.__len__(), " projects")
+
+print("Data structure im using to store the user input",type(todos))
