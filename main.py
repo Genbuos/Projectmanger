@@ -1,31 +1,14 @@
-project = 'What is the project?'
-
-language = 'What is the language?'
-
-#this is how you comment in py!
-
-#input() is a function built in to python.
-"""
-this is a multiline comment.
-
-:input() is used to take in input from the console. or "user"
+user_prompt = "Enter a project: "
+user_prompt2 = "Enter a language: "
 
 
-im gonna use this to build a to do app to help me 
-manage any projects that i may be working on !
+todos = {}
 
-"""
-todo1P = input(project)
-todo1L = input(language)
-todo2P = input(project)
-todo2L = input(language)
-todo3P = input(project)
-todo3L = input(language)
+while True:
+    todo1 = input(user_prompt)
+    todo2 = input(user_prompt2)
+    todos.update({todo1: todo2.upper()})
+    print("\nCurrent total of active projects:", len(todos), "\n")
 
-
-
-todos = {todo1P:todo1L, todo2P:todo2L, todo3P:todo3L}
-print("these are the current projects that i am working on:", todos,"\n",
-      "there are: ", todos.__len__(), " projects")
-
-print("Data structure im using to store the user input",type(todos))
+    for project, language in todos.items():
+        print(f"Project: {project.title()} - Language: {language} \n")
